@@ -39,6 +39,7 @@ footer {
     padding: 2.5px;
     bottom: 0;
     width: 100%;
+    position: fixed;
     border-top: 2px solid black;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -57,6 +58,6 @@ footer {
     }
     section {
         padding: 10px;
-        margin: 10px;
+        margin: 30px;
     }
 }
