@@ -1,4 +1,4 @@
-/* Desktop Style */
+/* Main Body Style */
 body {
     background-color: wheat;
     font-family: Arial, sans-serif;
@@ -17,6 +17,7 @@ header {
 }
 h1, h2{
     text-decoration: underline;
+    font-size: 30px;
 }
 nav ul {
     list-style: none;
@@ -49,7 +50,67 @@ footer {
     border-top-left-radius: 10px;
 }
 
-/* Modile Style*/
+/* Projects Styling*/
+#projects {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#projects h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    grid-row: 1;
+    grid-column: 1 / -1;
+}
+
+.project {
+    background-color: silver;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.project h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.project p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.toggle-details {
+    background-color: wheat;
+    color: black;
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.toggle-details:hover {
+    background-color: white;
+}
+
+.project-details {
+    font-size: 15px;
+    margin-top: 10px;
+    background-color: wheat;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 7.5px;
+}
+
+
+
+/* Modile Style */
 @media only screen and (max-width: 600px) {
     header {
         padding: 20px;
