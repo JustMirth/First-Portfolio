@@ -32,7 +32,6 @@ const userMessageError = document.getElementById("userMessageError");
 const successMessage = document.getElementById("successMessage");
 
 form.addEventListener("submit", function(event) {
-    console.log('Form submission triggered');
     nameError.textContent = "";
     emailError.textContent = "";
     userMessageError.textContent = "";
@@ -59,13 +58,12 @@ form.addEventListener("submit", function(event) {
     }
 
     if(isValid){
-        console.log('Form is valid, success message displayed');
-        successMessage.textContent = "Form Submitted!"
+        successMessage.textContent = "Thank you for the message, I will try to respond as soon as possible."
+        event.preventDefault();
     }
     
 
     if (!isValid) {
-        console.log('Form is invalid, prevent form submission');
         event.preventDefault();
     }
 

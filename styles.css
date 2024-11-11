@@ -108,9 +108,64 @@ footer {
     border-radius: 7.5px;
 }
 
+/* Form Styling */
+.error {
+    color: black;
+    font-size: 15px;
+}
+.success {
+    color: black;
+    font-size: 15px;
+}
+form {
+    max-width: 100%;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: silver;
+}
+input[type="text"], input[type="email"], input[type="userMessage"] {
+    width: fit-content;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    padding: 10px;
+    background-color: wheat;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: white;
+}
+
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+input[type=text] {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+input[type=email] {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
 
 
-/* Modile Style */
+/* Mobile Style */
 @media only screen and (max-width: 600px) {
     header {
         padding: 20px;
