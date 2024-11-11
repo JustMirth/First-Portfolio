@@ -1,23 +1,77 @@
-//Show details buttons
+/* Projects Scripts */
 document.addEventListener("DOMContentLoaded", function () {
     
-    // Select all buttons with class 'toggle-details'
     const buttons = document.querySelectorAll('.toggle-details');
     
-    // Iterate through each button and attach an event listener
     buttons.forEach(function (button) {
         button.addEventListener('click', function () {
-            // Get the associated project details div
             const projectDetails = button.nextElementSibling;
             
-            // Toggle visibility of the project details
             if (projectDetails.style.display === 'none') {
-                projectDetails.style.display = 'block';  // Show details
-                button.textContent = 'Hide Details';     // Change button text
+                projectDetails.style.display = 'block';
+                button.textContent = 'Hide Details';   
             } else {
-                projectDetails.style.display = 'none';  // Hide details
-                button.textContent = 'Show Details';    // Change button text
+                projectDetails.style.display = 'none';
+                button.textContent = 'Show Details';
             }
         });
     });
 });
+
+/* Form Scripts */
+const form = document.getElementById("contactForm");
+
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const userMessageInput = document.getElementById("userMessage");
+
+const nameError = document.getElementById("nameError");
+const emailError = document.getElementById("emailError");
+const userMessageError = document.getElementById("userMessageError");
+
+const successMessage = document.getElementById("successMessage");
+
+form.addEventListener("submit", function(event) {
+    console.log('Form submission triggered');
+    nameError.textContent = "";
+    emailError.textContent = "";
+    userMessageError.textContent = "";
+    successMessage.textContent = "";
+
+    let isValid = true;
+    
+    if(nameInput.value.trim() === ""){
+        nameError.textContent = "Please Enter Your Name";
+        isValid = false;
+    }
+
+    if(emailInput.value.trim() === ""){
+        emailError.textContent = "Please Enter Your Email";
+        isValid = false;
+    } else if(!validateEmail(emailInput.value)){
+        emailError.textContent = "Please Enter A Valid Email Address";
+        isValid = false;
+    }
+
+    if(userMessageInput.value.trim() === ""){
+        userMessageError.textContent = "Please Enter Your Message";
+        isValid = false;
+    }
+
+    if(isValid){
+        console.log('Form is valid, success message displayed');
+        successMessage.textContent = "Form Submitted!"
+    }
+    
+
+    if (!isValid) {
+        console.log('Form is invalid, prevent form submission');
+        event.preventDefault();
+    }
+
+});
+
+function validateEmail(email){
+    const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    return re.test(String(email));
+}
