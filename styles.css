@@ -120,12 +120,13 @@ footer {
     font-size: 15px;
 }
 form {
-    max-width: 100%;
+    max-width: max-content;
     margin: auto;
     padding: 10px;
     border: 1px solid black;
     border-radius: 5px;
     background-color: silver;
+    align-self: center;
 }
 input[type="text"], input[type="email"], input[type="userMessage"] {
     width: fit-content;
