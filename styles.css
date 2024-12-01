@@ -61,6 +61,8 @@ img {
     object-fit: contain;
     width: 100%;
     height: 30%;
+    border-radius: 10px;
+    border: 2px solid black;
 }
 
 /* Projects Styling*/
@@ -228,6 +230,9 @@ input[type=email] {
         background-color: silver;
         color: black;
         border-color: grey;
+        img {
+            border-color: grey;
+        }
     }
     form {
         background-color: black;
