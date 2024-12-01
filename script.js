@@ -62,7 +62,6 @@ form.addEventListener("submit", function(event) {
         event.preventDefault();
     }
     
-
     if (!isValid) {
         event.preventDefault();
     }

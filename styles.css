@@ -6,6 +6,7 @@ body {
     padding: 0;
     padding-bottom: 50px;
     padding-top: 100px;
+    text-align: center;
 }
 header {
     background-color: silver;
@@ -55,18 +56,16 @@ footer {
 /* Projects Styling*/
 #projects {
     display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
     padding: 20px;
     margin-top: 20px;
+    width: 100%;
+    gap: 10px;
 }
 
-#projects h2 {
+h2 {
     font-size: 30px;
     margin-bottom: 20px;
-    grid-row: 1;
-    grid-column: 1 / -1;
 }
 
 .project {
@@ -74,6 +73,8 @@ footer {
     padding: 15px;
     border-radius: 10px;
     border: 2px solid black;
+    width: 60%;
+    place-self: center;
 }
 
 .project h3 {
@@ -127,6 +128,7 @@ form {
     border-radius: 5px;
     background-color: silver;
     align-self: center;
+    text-align: center;
 }
 input[type="text"], input[type="email"], input[type="userMessage"] {
     width: fit-content;
