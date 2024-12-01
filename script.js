@@ -72,3 +72,8 @@ function validateEmail(email){
     const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     return re.test(String(email));
 }
+
+const toggleThemeButton = document.getElementById('darkmode');
+toggleThemeButton.addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+});

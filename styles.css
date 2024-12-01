@@ -53,6 +53,10 @@ footer {
     border-top-left-radius: 10px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Projects Styling*/
 #projects {
     display: grid;
@@ -169,7 +173,6 @@ input[type=email] {
     border: 1px solid black;
 }
 
-
 /* Mobile Style */
 @media only screen and (max-width: 600px) {
     header {
@@ -189,5 +192,37 @@ input[type=email] {
     section {
         padding: 10px;
         margin-bottom: 10px;
+    }
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+    header {
+        background-color: black;
+    }
+    nav ul li a {
+        color: silver;
+    }
+    nav ul li a:hover {
+        color: white;
+    }
+    button {
+        background-color: silver;
+        color: black;
+    }
+    .project {
+        background-color: black;
+    }
+    .project-details {
+        background-color: silver;
+        color: black;
+    }
+    form {
+        background-color: black;
+    }
+    footer{
+        background-color: black;
     }
 }
