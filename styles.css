@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
     padding-top: 100px;
     text-align: center;
 }
@@ -55,6 +55,12 @@ footer {
 
 html {
     scroll-behavior: smooth;
+}
+
+img {
+    object-fit: contain;
+    width: 100%;
+    height: 30%;
 }
 
 /* Projects Styling*/
@@ -197,32 +203,41 @@ input[type=email] {
 
 /* Dark Mode */
 .dark-mode {
-    background-color: #333;
-    color: #fff;
+    background-color: dimgray;
+    color: whitesmoke;
     header {
         background-color: black;
+        border-color: grey;
     }
     nav ul li a {
         color: silver;
     }
     nav ul li a:hover {
-        color: white;
+        color: grey;
     }
     button {
         background-color: silver;
         color: black;
+        border-color: grey;
     }
     .project {
         background-color: black;
+        border-color: grey;
     }
     .project-details {
         background-color: silver;
         color: black;
+        border-color: grey;
     }
     form {
         background-color: black;
+        border-color: grey;
+        p{
+            color: whitesmoke;
+        }
     }
     footer{
         background-color: black;
+        border-color: grey;
     }
 }
